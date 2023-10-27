@@ -33,7 +33,9 @@ jobs:
         aws-region: 'us-east-1'
         
     - name: Debug CodeArtifact Auth Token
-      run: echo $CODEARTIFACT_AUTH_TOKEN
+      run: |
+        export CODEARTIFACT_AUTH_TOKEN='aws codeartifact login get-authorization-token --domain java --domain-owner 669283534479 --region ap-south-1 --query authorizationToken --output text'
+        echo $CODEARTIFACT_AUTH_TOKEN
       
     - name: Push Artifact to AWS CodeArtifact
       run: |
