@@ -16,7 +16,7 @@
 	<distributionManagement>
 		<repository>
 			<id>codeartifact</id>
-			<url>arn:aws:codeartifact:ap-south-1:669283534479:repository/java/sample_repo_name</url>
+			<url>https://example-domain-123456789012.d.codeartifact.ap-south-1.amazonaws.com/java/sample_repo_name/</url>
 		</repository>
 	</distributionManagement>
 
