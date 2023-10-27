@@ -40,4 +40,5 @@ jobs:
 
     - name: Copy JAR to S3
       run: |
+        ls -lart
         aws s3 cp target/*.jar s3://mybucketformyproject/
