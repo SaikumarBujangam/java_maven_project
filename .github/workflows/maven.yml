@@ -32,7 +32,7 @@ jobs:
       with:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        aws-region: 'us-east-1'
+        aws-region: 'ap-south-1'
 
     - name: Print Environment Variables
       run: env
@@ -44,4 +44,4 @@ jobs:
 
     - name: Push Artifact to AWS CodeArtifact
       run: |
-        mvn clean deploy --settings settings.xml -Daws.codeartifact.authToken=${CODEARTIFACT_AUTH_TOKEN}
+        mvn clean deploy -Daws.codeartifact.authToken=${CODEARTIFACT_AUTH_TOKEN}
