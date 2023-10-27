@@ -6,4 +6,18 @@
             <password>${env.CODEARTIFACT_AUTH_TOKEN}</password>
         </server>
     </servers>
+    <profiles>
+        <profile>
+            <id>default</id>
+            <repositories>
+                <repository>
+                    <id>codeartifact</id>
+                    <url>https://java-669283534479.d.codeartifact.ap-south-1.amazonaws.com/maven/sample_repo_name/</url>
+                </repository>
+            </repositories>
+        </profile>
+    </profiles>
+    <activeProfiles>
+        <activeProfile>default</activeProfile>
+    </activeProfiles>
 </settings>
