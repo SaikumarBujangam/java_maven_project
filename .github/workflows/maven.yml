@@ -47,5 +47,5 @@ jobs:
       run: |
         cd target
         ls -lrt
-        aws s3 cp *.jar s3://mytestbucket27102023
+        aws s3 cp ./*.jar s3://mytestbucket27102023/
 
