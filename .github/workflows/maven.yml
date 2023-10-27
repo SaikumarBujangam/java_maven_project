@@ -47,5 +47,8 @@ jobs:
       run: |
         cd target
         ls -lrt
-        aws s3 cp ./*.jar s3://mytestbucket27102023/
+        for file in *.jar; do
+        aws s3 cp "$file" "s3://mytestbucket27102023/$file"
+        done
+
 
