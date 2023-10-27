@@ -38,7 +38,8 @@ jobs:
       run: |
         mvn --no-transfer-progress -s settings.xml clean package deploy
 
-    - name: Copy JAR to S3
-      run: |
-        ls -lart
-        aws s3 cp target/*.jar s3://mybucketformyproject/
+    - name: Upload to S3
+      uses: aws-actions/aws-cli@v2
+      with:
+        args: s3 cp target/*.jar s3://mybucketformyproject/
+
