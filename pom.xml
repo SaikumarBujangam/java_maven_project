@@ -12,37 +12,13 @@
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
-	<distributionManagement>
-    		<repository>
-        		<id>codeartifact</id>
-        		<url>arn:aws:codeartifact:ap-south-1:669283534479:repository/java/sample_repo_name</url>
-    		</repository>
-	</distributionManagement>
-	<servers>
-    		<server>
-        		<id>codeartifact</id>
-        		<username>Saikumar</username>
-        		<password>${env.AWS_CODEARTIFACT_AUTH_TOKEN}</password>
-   		</server>
-	</servers>
 
-	<dependencies>
-		<!-- tag::joda[] -->
-		<dependency>
-			<groupId>joda-time</groupId>
-			<artifactId>joda-time</artifactId>
-			<version>2.9.2</version>
-		</dependency>
-		<!-- end::joda[] -->
-		<!-- tag::junit[] -->
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.12</version>
-			<scope>test</scope>
-		</dependency>
-		<!-- end::junit[] -->
-	</dependencies>
+	<distributionManagement>
+		<repository>
+			<id>codeartifact</id>
+			<url>arn:aws:codeartifact:ap-south-1:669283534479:repository/java/sample_repo_name</url>
+		</repository>
+	</distributionManagement>
 
 	<build>
 		<plugins>
@@ -68,5 +44,31 @@
 			</plugin>
 		</plugins>
 	</build>
+
+	<servers>
+		<server>
+			<id>codeartifact</id>
+			<username>Saikumar</username>
+			<password>${env.AWS_CODEARTIFACT_AUTH_TOKEN}</password>
+		</server>
+	</servers>
+
+	<dependencies>
+		<!-- tag::joda[] -->
+		<dependency>
+			<groupId>joda-time</groupId>
+			<artifactId>joda-time</artifactId>
+			<version>2.9.2</version>
+		</dependency>
+		<!-- end::joda[] -->
+		<!-- tag::junit[] -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- end::junit[] -->
+	</dependencies>
 
 </project>
