@@ -14,10 +14,18 @@
 	</properties>
 	<distributionManagement>
     		<repository>
-        		<id>sample_repo_name</id>
+        		<id>codeartifact</id>
         		<url>arn:aws:codeartifact:ap-south-1:669283534479:repository/java/sample_repo_name</url>
     		</repository>
 	</distributionManagement>
+	<servers>
+    		<server>
+        		<id>codeartifact</id>
+        		<username>Saikumar</username>
+        		<password>${env.AWS_CODEARTIFACT_AUTH_TOKEN}</password>
+   		 </server>
+	</servers>
+
 	<dependencies>
 		<!-- tag::joda[] -->
 		<dependency>
