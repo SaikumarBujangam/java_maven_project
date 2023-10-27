@@ -33,7 +33,7 @@ jobs:
         aws-region: 'us-east-1'
     - name: Push Artifact to AWS CodeArtifact
       run: |
-        aws codeartifact login --tool maven --repository sample_repo_name --domain java
+        aws codeartifact login --repository sample_repo_name --domain java
         mvn deploy
       
       
