@@ -14,13 +14,11 @@
 	</properties>
 
 	<distributionManagement>
-    		<repositories>
         		<repository>
            			 <id>codeartifact</id>
            			 <name>codeartifact</name>
            			 <url>https://java-669283534479.d.codeartifact.ap-south-1.amazonaws.com/maven/sample_repo_name/</url>
         		</repository>
-    		</repositories>
 	</distributionManagement>
 
 	<build>
