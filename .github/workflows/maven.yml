@@ -39,5 +39,8 @@ jobs:
         mvn --no-transfer-progress -s settings.xml clean package deploy
 
     - name: Copy JAR to S3
-      run: aws s3 cp target/*.jar s3://mybucketformyproject/devops-infra
+      run: |
+        cd target
+        ls -lrt
+        aws s3 cp *.jar s3://mybucketformyproject/devops-infra
 
