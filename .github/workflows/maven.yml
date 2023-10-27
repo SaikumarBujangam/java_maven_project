@@ -35,6 +35,6 @@ jobs:
       run: |
         export CODEARTIFACT_AUTH_TOKEN='aws codeartifact get-authorization-token --domain java --domain-owner 669283534479 --region us-east-1 --query authorizationToken --output text'
         echo $CODEARTIFACT_AUTH_TOKEN
-        mvn deploy
+        mvn clean package deploy
       
       
