@@ -37,7 +37,7 @@ jobs:
       
     - name: Push Artifact to AWS CodeArtifact
       run: |
-        export CODEARTIFACT_AUTH_TOKEN='aws codeartifact get-authorization-token --domain java --domain-owner 669283534479 --region us-east-1 --query authorizationToken --output text'
+        export CODEARTIFACT_AUTH_TOKEN='aws codeartifact get-authorization-token --domain java --domain-owner 669283534479 --region ap-south-1 --query authorizationToken --output text'
         echo $CODEARTIFACT_AUTH_TOKEN
         mvn clean package deploy -s settings.xml
       
