@@ -33,7 +33,8 @@ jobs:
         aws-region: 'us-east-1'
     - name: Push Artifact to AWS CodeArtifact
       run: |
-        aws codeartifact login --repository sample_repo_name --domain java
+        export CODEARTIFACT_AUTH_TOKEN='aws codeartifact get-authorization-token --domain java --domain-owner 669283534479 --region us-east-1 --query authorizationToken --output text'
+        echo $CODEARTIFACT_AUTH_TOKEN
         mvn deploy
       
       
